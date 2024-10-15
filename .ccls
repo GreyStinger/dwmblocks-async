@@ -1,0 +1,10 @@
+clang
+-std=c99
+-I./include
+-I./
+-I/nix/store/y17mkjl442q2s12iy8nwr0r21mimvi4f-libxcb-1.17.0-dev/lib/pkgconfig
+-I/nix/store/hhg06qy834div9x1za8cd8giwkisqs7d-libX11-1.8.10-dev/lib/pkgconfig
+-I/nix/store/cjsw78ggdx6c0cy28hjd2cay4gay6r72-libXft-2.3.8-dev/lib/pkgconfig
+-I/nix/store/bm6d1m9zzy6czb232wyjir2mjslmz27f-xcb-util-0.4.1-dev/lib/pkgconfig
+-I/nix/store/4ly0icqic461gi80rr3l5i1bwypr75li-xcb-util-keysyms-0.4.1-dev/lib/pkgconfig
+-I/nix/store/6c7nw6s7fpgrhg6rsvvhylgpm9ijbkff-xcb-util-wm-0.4.2-dev/lib/pkgconfig

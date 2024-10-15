@@ -1,5 +1,7 @@
 .POSIX:
 
+VERSION := 0.1.0
+
 BIN := dwmblocks
 BUILD_DIR := build
 SRC_DIR := src
@@ -10,9 +12,9 @@ VERBOSE := 0
 LIBS := xcb-atom
 
 PREFIX := /usr/local
-CFLAGS := -Ofast -I. -I$(INC_DIR) -std=c99
+CFLAGS := -I. -I$(INC_DIR) -std=c99
 CFLAGS += -DBINARY=\"$(BIN)\" -D_POSIX_C_SOURCE=200809L
-CFLAGS += -Wall -Wpedantic -Wextra -Wswitch-enum
+CFLAGS += -Wall -Wpedantic -Wextra -Wswitch-enum -Wno-comment -Wno-unused-result
 CFLAGS += $(shell pkg-config --cflags $(LIBS))
 LDLIBS := $(shell pkg-config --libs $(LIBS))
 
@@ -28,7 +30,9 @@ ifeq ($(VERBOSE), 0)
 endif
 
 ifeq ($(DEBUG), 1)
-	CFLAGS += -g
+	CFLAGS += -g -O0
+else
+	CFLAGS += -Ofast
 endif
 
 all: $(BUILD_DIR)/$(BIN)

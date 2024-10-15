@@ -1,3 +1,6 @@
 build/
+.ccls
+.ccls-cache/
 .cache/
+result**
 compile_commands.json
